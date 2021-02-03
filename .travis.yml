@@ -5,6 +5,10 @@ services:
 addons:
   postgresql: "9.4"
 
+branches:
+  only:
+    - master
+
 before_script:
   - cp  decide/local_settings.travis.py decide/local_settings.py
   - psql -U postgres -c "create user decide password 'decide'"
@@ -22,4 +26,4 @@ script:
   #- coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
-  - manage.py test visualizer -v 2
+  - python3 ./manage.py test voting -v 2
