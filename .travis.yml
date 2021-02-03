@@ -22,4 +22,4 @@ script:
   #- coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
-  - python3 ./manage.py test visualizer -v 2
+  - python3 ./manage.py test voting -v 2
