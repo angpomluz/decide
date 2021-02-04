@@ -5,9 +5,14 @@ services:
 addons:
   postgresql: "9.4"
 
+notifications:
+  email:
+    - angelpomaresus@gmail.com
+    - anyelo1990@hotmail.com
 branches:
   only:
     - master
+    - pruebacambios
 
 before_script:
   - cp  decide/local_settings.travis.py decide/local_settings.py
