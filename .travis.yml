@@ -33,9 +33,10 @@ language: python
 install:
   - pip install -r requirements.txt
   - pip install codacy-coverage
+  - pip install selenium
 script:
   - cd decide
   #- coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
-  - python ./manage.py test authentication/testsSelenium.py
+  - python3 ./manage.py test authentication/testsSelenium.py -v 2
