@@ -29,7 +29,8 @@ before_script:
   - python decide/manage.py migrate
 language: python
 
-
+before install:
+  - sudo apt install chromium-browser chromium-chromedriver
 install:
   - pip install -r requirements.txt
   - pip install codacy-coverage
