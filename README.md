@@ -2,6 +2,8 @@
 
 ICONO DE BUILD DE TRAVIS AÑADIDO POR MI:
 [![Build Status](https://travis-ci.com/angpomluz/decide.svg?branch=master)](https://travis-ci.com/angpomluz/decide)
+ICONO DE CODACY AÑADIDO POR MI:
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d68b8ba8954440338872f44ddbf41301)](https://www.codacy.com/gh/angpomluz/decide/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=angpomluz/decide&amp;utm_campaign=Badge_Grade)
 
 Plataforma voto electrónico educativa
 
