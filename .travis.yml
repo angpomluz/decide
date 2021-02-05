@@ -38,4 +38,4 @@ script:
   #- coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
-  - python ./manage.py test authentication/testsSelenium.py -v 2
+  - python ./manage.py test authentication/testsSelenium.py
