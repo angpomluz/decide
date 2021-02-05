@@ -7,8 +7,11 @@ addons:
 
 notifications:
   email:
+    recipients:
     - angelpomaresus@gmail.com
     - anyelo1990@hotmail.com
+    on_success: always
+    on_failure: always
 branches:
   only:
     - master
