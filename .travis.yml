@@ -5,9 +5,17 @@ services:
 addons:
   postgresql: "9.4"
 
+notifications:
+  email:
+    recipients:
+    - angelpomaresus@gmail.com
+    - anyelo1990@hotmail.com
+    on_success: always
+    on_failure: always
 branches:
   only:
     - master
+    - pruebacambios
 
 before_script:
   - cp  decide/local_settings.travis.py decide/local_settings.py
@@ -23,7 +31,6 @@ install:
   - pip install codacy-coverage
 script:
   - cd decide
-  #- coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
-  #- coverage xml
-  #- python-codacy-coverage -r coverage.xml
-  - python3 ./manage.py test voting -v 2
+  - coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
+  - coverage xml
+  - python-codacy-coverage -r coverage.xml
