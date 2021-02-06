@@ -45,7 +45,7 @@ script:
   #- coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
-  - python3 ./manage.py test authentication/testsSelenium.py -v 2
+  - python3 ./manage.py test mixnet
 deploy:
   provider: heroku
   app: angpomluz-egc-p7
