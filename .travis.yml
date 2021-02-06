@@ -20,6 +20,7 @@ branches:
   only:
     - master
     - pruebacambios
+    - practica7
 
 before_script:
   - cp  decide/local_settings.travis.py decide/local_settings.py
@@ -45,3 +46,8 @@ script:
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
   - python3 ./manage.py test authentication/testsSelenium.py -v 2
+deploy:
+  provider: heroku
+  app: angpomluz-egc-p7
+  strategy: git
+  apikey: $HEROKU_AUTH_TOKEN
