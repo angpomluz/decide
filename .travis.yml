@@ -28,6 +28,7 @@ before_script:
   - psql -U postgres -c "create database test_decide owner decide"
   - psql -U postgres -c "ALTER USER decide CREATEDB"
   - python decide/manage.py migrate
+  - decide/manage.py createsuperuser --username administrador --password administrador --email admin@admin.com
 language: python
 
 before install:
