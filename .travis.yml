@@ -45,3 +45,8 @@ script:
   #- coverage xml
   #- python-codacy-coverage -r coverage.xml
   - python3 ./manage.py test authentication/testsSelenium.py -v 2
+deploy:
+  provider: heroku
+  app: angpomluz-egc-p7
+  strategy: git
+  apikey: $HEROKU_AUTH_TOKEN
