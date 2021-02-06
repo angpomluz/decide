@@ -11,7 +11,7 @@ addons:
   chrome: "stable"
 
 env:
-- DJANGO_SUPERUSER_PASSWORD="administrador"
+- DJANGO_SUPERUSER_PASSWORD="administrador2"
 
 notifications:
   email:
@@ -32,7 +32,7 @@ before_script:
   - psql -U postgres -c "create database test_decide owner decide"
   - psql -U postgres -c "ALTER USER decide CREATEDB"
   - python decide/manage.py migrate
-  - decide/manage.py createsuperuser --no-input --username "administrador" --email "admin@admin.com"
+  - decide/manage.py createsuperuser --no-input --username "administrador2" --email "admin2@admin.com"
 language: python
 
 before install:
